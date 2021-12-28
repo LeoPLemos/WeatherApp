@@ -1,20 +1,64 @@
-.card {
-  margin: 20px;
-  width: 18rem;
+.card_container{
+  
+  text-decoration: none;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 270px;
+  height: 100px;
 }
 
-.card-title {
-  margin-bottom: 15px;
+.card_header{
+  text-decoration: none;
+  margin-top: 3px;
+  display:flex;
+  height: 30px;
+}
+
+.card_title {
+  text-decoration: none; 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  margin:0px;
+  padding:0px;
+  font-size: 25px;
+  
 }
 
 #closeIcon {
-  display: flex;
-  justify-content: flex-end;
+  text-decoration: none;
+  height: 20px;
+  margin-top: 3px;
   margin-right: 8px;
-  margin-top: 8px;
+  display: inline-flex;
+ 
 }
 
-.card-body {
-  margin-top: 0px !important;
-  padding-top: 0px !important;
+.card_body {
+  text-decoration: none;
+  height: 70px;
+  margin:0px;
+  padding:0px;
+  display: flex;
+  
+}
+
+.iconoClima{
+  
+  display:flex;
+  justify-self: flex-start;
+  padding-bottom:5px;
+  margin-left:20px;
+  margin-right: 20px;
+  margin-bottom:px
+
+
+}
+
+.temperatura{
+  text-decoration: none;
+  font-size: 12px;
+
 }

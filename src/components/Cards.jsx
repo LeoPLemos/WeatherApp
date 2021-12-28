@@ -3,7 +3,8 @@ import "./Cards.css";
 
 import Card from "./Card.jsx";
 
-export default function Cards({ cities, onClose }) {
+export default function Cards({ cities, onClose, getDetalle }) {
+ 
   return (
     <div className="cards">
       {cities.map((c) => (
@@ -15,6 +16,7 @@ export default function Cards({ cities, onClose }) {
           name={c.name}
           img={c.img}
           onClose={() => onClose(c.id)}
+          getDetalle={getDetalle}
         />
       ))}
     </div>
