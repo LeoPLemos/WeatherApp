@@ -8,6 +8,11 @@ export default function Card({ min, max, name, img, onClose, id, getDetalle }) {
     getDetalle(id)
   }
 
+  const handleOnClose = (e) =>{
+    e.stopPropagation();
+    onClose()
+  }
+
   return (
     <div>
       {/* <Link to={`ciudad/${id}`}> */}
@@ -17,7 +22,7 @@ export default function Card({ min, max, name, img, onClose, id, getDetalle }) {
               <p>{name}</p>
             </div>
             <div id="closeIcon" >
-              <button onClick={onClose}>
+              <button onClick={handleOnClose}>
                 X
               </button>
             </div>

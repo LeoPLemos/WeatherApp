@@ -4,8 +4,9 @@
   margin-bottom: 10px;
   border: 1px solid black;
   border-radius: 20px;
-  width: 270px;
+  width: 20vw;
   height: 100px;
+  cursor: pointer;
 }
 
 .card_header{

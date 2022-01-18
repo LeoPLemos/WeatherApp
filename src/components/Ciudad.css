@@ -1,0 +1,93 @@
+.ciudad{
+    display:flex;
+    flex-direction: column;
+}
+
+.container{
+    background-color: brown;
+    width:65vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 20px;
+
+}
+
+#boton_volver{
+    display: flex;
+    align-self: flex-end;
+    margin: 5px;
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+   
+}
+
+#boton_volver:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+#nombre_ciudad{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 68px;
+    font-weight: 600;
+    
+}
+
+
+.info{
+    width:65vw;
+    
+}
+
+.actual{
+    background-color: darkmagenta;
+    display:flex;
+    text-align: left;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    
+    
+}
+
+.actual_img{
+    border-radius: 20px;
+    margin-right: 30px;
+    background-color: cornflowerblue;
+}
+
+.pronostico{
+    background-color: darkgreen;
+    padding: 10px 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-top: 5px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.card_pronostico{
+
+}

@@ -14,12 +14,13 @@
     background-color: aquamarine;
     border: 2px solid black;
     display:flex;
-    width: 73vw;
+    width: 70vw;
     margin-right: 30px;
     
 }
 
 .container_cards{
+    width: 20vw;
     border: 2px solid black;
     background-color: coral;
     

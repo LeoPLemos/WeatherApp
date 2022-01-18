@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './Ciudad.css';
 // import { useParams } from "react-router-dom";
 
 const apiKey = "9ce8d2cee7155065d71a556a1795e595";
@@ -15,7 +16,7 @@ export default function Ciudad({ciudadId, resetDetalle}) {
     wind: 1.34,
     temp: 33.77,
     name: "Córdoba",
-    weather: "Clear",
+    weather: "Despejado",
     latitud: -31.4135,
     longitud: -64.1811,
     forecast:[
@@ -82,7 +83,8 @@ export default function Ciudad({ciudadId, resetDetalle}) {
   let hoyMasTres = diaSemana(hoy+3);
   let hoyMasCuatro = diaSemana(hoy+4);
   let hoyMasCinco = diaSemana(hoy+5);
-  
+
+    
   if (!city) return <h4>La ciudad no existe</h4>;
 
   function handleOnCerrar(e){
@@ -92,71 +94,109 @@ export default function Ciudad({ciudadId, resetDetalle}) {
 
   return (
     <div className="ciudad">
-      <button onClick={handleOnCerrar}>
-          Cerrar
-      </button>
+      <div onClick={handleOnCerrar} id="boton_volver">
+          Volver
+      </div>
       {!city.forecast?
         <div>Cargando...</div>
         : 
         <div className="container">
-          <h2>{city.name}</h2>
+          <div id="nombre_ciudad">{city.name}</div>
           <div className="info">
-            <div>Temperatura actual: {city.temp} ºC</div>
-            <div>Cielo: {city.weather}</div>
-            <div>Viento: {city.wind} km/h</div>
-            <img className="iconoClima"
-                src={`http://openweathermap.org/img/wn/${city.img}@2x.png`}
-                width="80"
-                height="80"
-                alt=""
-            />
+            <div className="actual">
+              <div className="actual_img">  
+                <img className="iconoClima"
+                    src={`http://openweathermap.org/img/wn/${city.img}@2x.png`}
+                    width="90"
+                    height="90"
+                    alt=""
+                />
+              </div>
+              <div className="actual_datos">
+                <div>Temperatura actual: {city.temp}º C</div>
+                <div>Cielo: {city.weather}</div>
+                <div>Viento: {city.wind} km/h</div>
+              </div>
+            </div>
             <br/>
-            <div>Pronóstico</div>
-            <div>
-              <div>Mañana: Min: {Math.round(city.forecast[1].temp.min)} - Max: {Math.round(city.forecast[1].temp.max)}</div>
-              <img className="iconoClima"
-                src={`http://openweathermap.org/img/wn/${city.forecast[1].weather[0].icon}@2x.png`}
-                width="80"
-                height="80"
-                alt=""
-              />
-            </div>
-            <div>
-              <div>{hoyMasDos}: Min: {Math.round(city.forecast[2].temp.min)} - Max: {Math.round(city.forecast[2].temp.max)}</div>
-              <img className="iconoClima"
-                src={`http://openweathermap.org/img/wn/${city.forecast[2].weather[0].icon}@2x.png`}
-                width="80"
-                height="80"
-                alt=""
-              />
-            </div>
-            <div>
-              <div>{hoyMasTres}: Min: {Math.round(city.forecast[3].temp.min)} - Max: {Math.round(city.forecast[3].temp.max)}</div>
-              <img className="iconoClima"
-                src={`http://openweathermap.org/img/wn/${city.forecast[3].weather[0].icon}@2x.png`}
-                width="80"
-                height="80"
-                alt=""
-              />
-            </div>
-            <div>
-              <div>{hoyMasCuatro}: Min: {Math.round(city.forecast[4].temp.min)} - Max: {Math.round(city.forecast[4].temp.max)}</div>
-              <img className="iconoClima"
-                src={`http://openweathermap.org/img/wn/${city.forecast[4].weather[0].icon}@2x.png`}
-                width="80"
-                height="80"
-                alt=""
-              />
-            </div>
-            <div>
-              <div>{hoyMasCinco}: Min: {Math.round(city.forecast[5].temp.min)} - Max: {Math.round(city.forecast[5].temp.max)}</div>
-              <img className="iconoClima"
-                src={`http://openweathermap.org/img/wn/${city.forecast[5].weather[0].icon}@2x.png`}
-                width="80"
-                height="80"
-                alt=""
-              />
-            </div>
+            <div className="pronostico">
+              
+              <div className="card_pronostico mañana">
+                <div>Mañana</div>
+                <div className="pronostico_info">
+                  <img className="iconoClima"
+                    src={`http://openweathermap.org/img/wn/${city.forecast[1].weather[0].icon}@2x.png`}
+                    width="60"
+                    height="60"
+                    alt=""
+                  />
+                  <div className="pronostico_datos">
+                    <div>Min: {Math.round(city.forecast[1].temp.min)}º</div>
+                    <div>Max: {Math.round(city.forecast[1].temp.max)}º</div>
+                  </div>
+                </div>
+              </div>
+              <div className="card_pronostico hoyMasDos">
+                <div>{hoyMasDos}</div>
+                <div className="pronostico_info">
+                  <img className="iconoClima"
+                    src={`http://openweathermap.org/img/wn/${city.forecast[2].weather[0].icon}@2x.png`}
+                    width="60"
+                    height="60"
+                    alt=""
+                  />
+                  <div className="pronostico_datos">
+                    <div>Min: {Math.round(city.forecast[2].temp.min)}º</div>
+                    <div>Max: {Math.round(city.forecast[2].temp.max)}º</div>
+                  </div>
+                </div>
+              </div>
+              <div className="card_pronostico hoyMasTres">
+                <div>{hoyMasTres}</div>
+                <div className="pronostico_info">
+                  <img className="iconoClima"
+                    src={`http://openweathermap.org/img/wn/${city.forecast[3].weather[0].icon}@2x.png`}
+                    width="60"
+                    height="60"
+                    alt=""
+                  />
+                  <div className="pronostico_datos">
+                    <div>Min: {Math.round(city.forecast[3].temp.min)}º</div>
+                    <div>Max: {Math.round(city.forecast[3].temp.max)}º</div>
+                  </div>
+                </div>
+              </div>
+              <div className="card_pronostico hoyMasCuatro">
+                <div>{hoyMasCuatro}</div>
+                <div className="pronostico_info">
+                  <img className="iconoClima"
+                    src={`http://openweathermap.org/img/wn/${city.forecast[4].weather[0].icon}@2x.png`}
+                    width="60"
+                    height="60"
+                    alt=""
+                  />
+                  <div className="pronostico_datos">
+                    <div>Min: {Math.round(city.forecast[4].temp.min)}º</div>
+                    <div>Max: {Math.round(city.forecast[4].temp.max)}º</div>
+                  </div>
+                </div>
+              </div>
+              <div className="card_pronostico hoyMasCinco">
+                <div>{hoyMasCinco}</div>
+                <div className="pronostico_info">
+                  <img className="iconoClima"
+                    src={`http://openweathermap.org/img/wn/${city.forecast[5].weather[0].icon}@2x.png`}
+                    width="60"
+                    height="60"
+                    alt=""
+                  />
+                  <div className="pronostico_datos">
+                    <div>Min: {Math.round(city.forecast[5].temp.min)}º</div>
+                    <div>Max: {Math.round(city.forecast[5].temp.max)}º</div>
+                  </div>
+                </div>
+              </div>
+            </div>  
           </div>
         </div>
       }
