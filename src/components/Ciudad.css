@@ -4,90 +4,74 @@
 }
 
 .container{
-    background-color: brown;
+    position: relative;
+    /* border:1px solid black; */
     width:65vw;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px 20px;
-
+    padding: 150px 20px 0px 20px;
+    margin-top: 5px;
 }
 
 #boton_volver{
-    display: flex;
-    align-self: flex-end;
-    margin: 5px;
-    background: #3498db;
-    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-    background-image: -o-linear-gradient(top, #3498db, #2980b9);
-    background-image: linear-gradient(to bottom, #3498db, #2980b9);
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-   
+    display: inline-flex;
+    font:18px Arial, Helvetica, sans-serif; 
+    font-weight:bold; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    position:absolute;
+    right: 20px;
+    background-image: -moz-linear-gradient(top, #1c1e1f, #eff3f73a);
 }
 
 #boton_volver:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    text-decoration: none;
+    background-image: -moz-linear-gradient(top, #080808, #eff3f7de);
     cursor: pointer;
-
 }
 
 #nombre_ciudad{
-    margin-top: 100px;
+    display:inline-flex;
+    text-shadow: 0 0 10px #FFFFFF, 6px 18px 2px rgba(206,89,55,0);
+    margin-top: 0px;
     margin-bottom: 10px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 68px;
     font-weight: 600;
-    
 }
-
 
 .info{
     width:65vw;
-    
 }
 
 .actual{
-    background-color: darkmagenta;
     display:flex;
     text-align: left;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 28px;
     font-weight: 600;
-    
-    
+    text-shadow: 0 0 10px #FFFFFF, 6px 18px 2px rgba(206,89,55,0);
 }
 
 .actual_img{
     border-radius: 20px;
     margin-right: 30px;
-    background-color: cornflowerblue;
 }
 
 .pronostico{
-    background-color: darkgreen;
+    -webkit-box-shadow: 8px 9px 2px 0px rgba(0,0,0,0.7); 
+    box-shadow: 8px 9px 2px 0px rgba(0,0,0,0.7);
     padding: 10px 20px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-radius: 5px;
     margin-top: 5px;
     display:flex;
     justify-content: space-around;
+    background-image: -moz-linear-gradient(top, #1c1e1f60, #eff3f73a);
+    color:whitesmoke;
+    text-shadow: 0 0 10px #050505, 6px 18px 2px rgba(206,89,55,0);
 }
 
-.card_pronostico{
-
+.dia{
+    font-weight: 600;
 }

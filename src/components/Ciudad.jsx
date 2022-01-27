@@ -11,7 +11,7 @@ export default function Ciudad({ciudadId, resetDetalle}) {
   const [ city, setCity ] = useState({
     min: 29,
     max: 35,
-    img: "01d",
+    img: "02d",
     id: 3860259,
     wind: 1.34,
     temp: 33.77,
@@ -94,13 +94,14 @@ export default function Ciudad({ciudadId, resetDetalle}) {
 
   return (
     <div className="ciudad">
-      <div onClick={handleOnCerrar} id="boton_volver">
-          Volver
-      </div>
+      
       {!city.forecast?
         <div>Cargando...</div>
         : 
         <div className="container">
+          <div onClick={handleOnCerrar} id="boton_volver">
+            X
+          </div>
           <div id="nombre_ciudad">{city.name}</div>
           <div className="info">
             <div className="actual">
@@ -122,7 +123,7 @@ export default function Ciudad({ciudadId, resetDetalle}) {
             <div className="pronostico">
               
               <div className="card_pronostico mañana">
-                <div>Mañana</div>
+                <div className="dia">Mañana</div>
                 <div className="pronostico_info">
                   <img className="iconoClima"
                     src={`http://openweathermap.org/img/wn/${city.forecast[1].weather[0].icon}@2x.png`}
@@ -137,7 +138,7 @@ export default function Ciudad({ciudadId, resetDetalle}) {
                 </div>
               </div>
               <div className="card_pronostico hoyMasDos">
-                <div>{hoyMasDos}</div>
+                <div className="dia">{hoyMasDos}</div>
                 <div className="pronostico_info">
                   <img className="iconoClima"
                     src={`http://openweathermap.org/img/wn/${city.forecast[2].weather[0].icon}@2x.png`}
@@ -152,7 +153,7 @@ export default function Ciudad({ciudadId, resetDetalle}) {
                 </div>
               </div>
               <div className="card_pronostico hoyMasTres">
-                <div>{hoyMasTres}</div>
+                <div className="dia">{hoyMasTres}</div>
                 <div className="pronostico_info">
                   <img className="iconoClima"
                     src={`http://openweathermap.org/img/wn/${city.forecast[3].weather[0].icon}@2x.png`}
@@ -167,7 +168,7 @@ export default function Ciudad({ciudadId, resetDetalle}) {
                 </div>
               </div>
               <div className="card_pronostico hoyMasCuatro">
-                <div>{hoyMasCuatro}</div>
+                <div className="dia">{hoyMasCuatro}</div>
                 <div className="pronostico_info">
                   <img className="iconoClima"
                     src={`http://openweathermap.org/img/wn/${city.forecast[4].weather[0].icon}@2x.png`}
@@ -182,7 +183,7 @@ export default function Ciudad({ciudadId, resetDetalle}) {
                 </div>
               </div>
               <div className="card_pronostico hoyMasCinco">
-                <div>{hoyMasCinco}</div>
+                <div className="dia">{hoyMasCinco}</div>
                 <div className="pronostico_info">
                   <img className="iconoClima"
                     src={`http://openweathermap.org/img/wn/${city.forecast[5].weather[0].icon}@2x.png`}

@@ -80,11 +80,11 @@ function Home() {
 
   return (
     <div>
-        <div>
-            <div>
+        <div className="header">
+            <div className="navBar">
                 <Nav onSearch={onSearch} /> 
             </div>
-            <div>   
+            <div className="searchBar">   
                 <SearchBar onSearch={onSearch} />
             </div>
         </div>

@@ -1,50 +1,70 @@
 .card_container{
-  
-  text-decoration: none;
-  margin-bottom: 10px;
-  border: 1px solid black;
-  border-radius: 20px;
-  width: 20vw;
-  height: 100px;
+  /* background:rgba(255, 255, 255, 0.2); */
+  -webkit-box-shadow: 8px 9px 2px 0px rgba(0,0,0,0.7); 
+  box-shadow: 8px 9px 2px 0px rgba(0,0,0,0.7);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  width: 15vw;
+  min-width: 180px;
+  height: 12vh;
   cursor: pointer;
+  background-image: -moz-linear-gradient(top, #1c1e1f60, #eff3f73a);
+  
 }
 
 .card_header{
-  text-decoration: none;
+  position: relative;
   margin-top: 3px;
+  margin-bottom: 0px;
   display:flex;
   height: 30px;
+  width: 15vw;
+  min-width: 180px;
+  
 }
 
-.card_title {
-  text-decoration: none; 
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  width: 270px;
+#city{
+  width: 13vw;
+  font-size: 1,5rem;
+  font-weight: 600;
+  color:whitesmoke;
+  text-shadow: 0 0 10px #050505, 6px 18px 2px rgba(206,89,55,0);
   margin:0px;
   padding:0px;
-  font-size: 25px;
-  
+  display:flex;
+  align-self: center;
+  justify-content: center;
+
 }
 
 #closeIcon {
-  text-decoration: none;
-  height: 20px;
-  margin-top: 3px;
-  margin-right: 8px;
-  display: inline-flex;
- 
+  /* background: transparent; */
+  width: 1vw;
+  margin-top: 1px;
+  display:flex;
+  position: absolute;
+  font:16px Arial, Helvetica, sans-serif; 
+  font-weight:bold; 
+  padding: 1px 3px 1px 4px;
+  border-radius: 5px;
+  right: 5px;
+  background-image: -moz-linear-gradient(top, #1c1e1f, #eff3f73a);
 }
 
-.card_body {
-  text-decoration: none;
-  height: 70px;
-  margin:0px;
-  padding:0px;
-  display: flex;
-  
+#closeIcon:hover{
+  background-image: -moz-linear-gradient(top, #080808, #eff3f7de);
 }
+
+.card_body{
+  width: 15vw;
+  min-width: 180px;
+  height:fit-content;
+  margin:0;
+  padding:0;
+  display: flex;
+}
+
 
 .iconoClima{
   
@@ -53,13 +73,22 @@
   padding-bottom:5px;
   margin-left:20px;
   margin-right: 20px;
-  margin-bottom:px
-
-
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0
 }
 
 .temperatura{
-  text-decoration: none;
+  color:whitesmoke;
+  text-shadow: 0 0 10px #050505, 6px 18px 2px rgba(206,89,55,0);
   font-size: 12px;
+  margin-top:10px;
+  padding:0;
+  height: 50px;
 
+}
+
+.data_temp{
+  margin:0;
+  padding:0
 }
