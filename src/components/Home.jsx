@@ -4,9 +4,10 @@ import Nav from "../components/Nav.jsx";
 import Cards from "../components/Cards.jsx";
 import Ciudad from "../components/Ciudad.jsx";
 import SearchBar from "./SearchBar.jsx";
+import env from "dotenv"
+env.config()
 
-
-const apiKey = "9ce8d2cee7155065d71a556a1795e595";
+const API_KEY = process.env.REACT_APP_API_KEY
 
 function Home() {
   const [cities, setCities] = useState([]);
@@ -19,7 +20,7 @@ function Home() {
   function onSearch(ciudad) {
     //Llamado a la API del clima
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric&lang=es`
+      `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${API_KEY}&units=metric&lang=es`
     )
     .then((r) => r.json())
     .then((recurso) => {
