@@ -100,7 +100,11 @@ function Home() {
                 
             </div>
             <div className="container_cards">
-                <Cards cities={cities} onClose={onClose} getDetalle={getDetalle}/>
+                <Cards  cities={cities} 
+                        onClose={onClose} 
+                        getDetalle={getDetalle}
+                        resetDetalle={resetDetalle}        
+                />
             </div>
         </div>
               

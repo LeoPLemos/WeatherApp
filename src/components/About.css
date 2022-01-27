@@ -1,0 +1,45 @@
+.about_page {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.boton_home {
+    
+    font:18px Arial, Helvetica, sans-serif; 
+    font-weight:bold; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    position:absolute;
+    top:20px;
+    right: 30px;
+    background-image: -moz-linear-gradient(top, #1c1e1f, #eff3f73a);
+    color: black;
+}
+
+.boton_home:hover {
+    background-image: -moz-linear-gradient(top, #080808, #eff3f7de);
+    cursor: pointer;
+}
+
+.titulo {
+    text-shadow: 0 0 10px #FFFFFF, 6px 18px 2px rgba(206,89,55,0);
+    margin-top: 50px
+}
+
+.about_container {
+    width: 60vw;
+    height: 40vh;
+    display: flex;
+    box-sizing: border-box;
+    align-self: center;
+    background-image: -moz-linear-gradient(top, #1c1e1f60, #eff3f73a);
+    -webkit-box-shadow: 8px 9px 2px 0px rgba(0,0,0,0.7); 
+    box-shadow: 8px 9px 2px 0px rgba(0,0,0,0.7);
+    border-radius: 10px;
+    padding: 40px 60px;
+}
+
+#about_contenido{
+    text-justify: newspaper;
+}

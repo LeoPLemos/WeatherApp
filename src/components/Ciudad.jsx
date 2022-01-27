@@ -1,43 +1,25 @@
 import React, { useEffect, useState } from "react";
 import './Ciudad.css';
-// import { useParams } from "react-router-dom";
+import env from "dotenv"
+env.config()
 
-const apiKey = "9ce8d2cee7155065d71a556a1795e595";
+const API_KEY = process.env.REACT_APP_API_KEY
 
 export default function Ciudad({ciudadId, resetDetalle}) {
   
   // const { ciudadId } = useParams(); 
   // el estado city lo tengo hardcodeado para probar los estilos sin llamar a la api
-  const [ city, setCity ] = useState({
-    min: 29,
-    max: 35,
-    img: "02d",
-    id: 3860259,
-    wind: 1.34,
-    temp: 33.77,
-    name: "Córdoba",
-    weather: "Despejado",
-    latitud: -31.4135,
-    longitud: -64.1811,
-    forecast:[
-      {},
-      { temp:{ min: 25, max: 33 }, weather:[ { icon: "01d" } ] },
-      { temp:{ min: 24, max: 34 }, weather:[ { icon: "02d" } ] },
-      { temp:{ min: 23, max: 32 }, weather:[ { icon: "04d" } ] },
-      { temp:{ min: 22, max: 31 }, weather:[ { icon: "02d" } ] },
-      { temp:{ min: 21, max: 30 }, weather:[ { icon: "01d" } ] },
-    ]
-  })
+  const [ city, setCity ] = useState({})
 
   //Llamado a la API del clima
   const getWeather = (ciudad) =>{
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?id=${ciudad}&lang=es&appid=${apiKey}&units=metric`
+      `http://api.openweathermap.org/data/2.5/weather?id=${ciudad}&lang=es&appid=${API_KEY}&units=metric`
     )
     .then((r) => r.json())
     .then((recurso) => {
       if (recurso.main !== undefined) {
-        fetch(`http://api.openweathermap.org/data/2.5/onecall?lat=${recurso.coord.lat}&lon=${recurso.coord.lon}&units=metric&exclude=hourly,minutely,alerts&lang=es&appid=${apiKey}`)
+        fetch(`http://api.openweathermap.org/data/2.5/onecall?lat=${recurso.coord.lat}&lon=${recurso.coord.lon}&units=metric&exclude=hourly,minutely,alerts&lang=es&appid=${API_KEY}`)
         .then(response => response.json())
         .then(res =>{
           
@@ -60,9 +42,9 @@ export default function Ciudad({ciudadId, resetDetalle}) {
       }})
   }
 
-//   useEffect (() =>{
-//     getWeather(ciudadId)
-// }, []);
+  useEffect (() =>{
+    getWeather(ciudadId)
+}, [ciudadId]);
   
 
 
@@ -96,7 +78,7 @@ export default function Ciudad({ciudadId, resetDetalle}) {
     <div className="ciudad">
       
       {!city.forecast?
-        <div>Cargando...</div>
+        <div className="cargando">Cargando...</div>
         : 
         <div className="container">
           <div onClick={handleOnCerrar} id="boton_volver">

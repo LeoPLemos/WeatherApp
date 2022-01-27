@@ -2,10 +2,11 @@ import React from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 
-export default function Card({ min, max, name, img, onClose, id, getDetalle }) {
+export default function Card({ min, max, name, img, onClose, id, getDetalle, resetDetalle }) {
 
   const handleOnClick = () =>{
-    getDetalle(id)
+    resetDetalle();
+    getDetalle(id);
   }
 
   const handleOnClose = (e) =>{

@@ -3,7 +3,7 @@ import "./Cards.css";
 
 import Card from "./Card.jsx";
 
-export default function Cards({ cities, onClose, getDetalle }) {
+export default function Cards({ cities, onClose, getDetalle, resetDetalle }) {
  
   return (
     <div className="cards">
@@ -17,6 +17,7 @@ export default function Cards({ cities, onClose, getDetalle }) {
           img={c.img}
           onClose={() => onClose(c.id)}
           getDetalle={getDetalle}
+          resetDetalle={resetDetalle}
         />
       ))}
     </div>

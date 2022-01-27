@@ -5,7 +5,6 @@
 
 .container{
     position: relative;
-    /* border:1px solid black; */
     width:65vw;
     height: fit-content;
     display: flex;
@@ -74,4 +73,14 @@
 
 .dia{
     font-weight: 600;
+}
+
+.cargando {
+    display:inline-flex;
+    text-shadow: 0 0 10px #FFFFFF, 6px 18px 2px rgba(206,89,55,0);
+    margin-top: 140px;
+    margin-left: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 56px;
+    font-weight: 300;
 }

@@ -5,17 +5,18 @@ import { Link } from "react-router-dom";
 
 function Nav({ onSearch }) {
   return (
-    <nav className="navbar navbar-dark bg-dark">
-      <Link to="/">
-        <span className="navbar-brand">
-          Weather App
-        </span>
-      </Link>
-      <Link to="/about">
-        <span>About</span>
-      </Link>
-      
-    </nav>
+    <div>
+      <div className="weatherApp">
+        Weather App
+      </div>
+      <nav className="navBar">
+        
+        <Link to="/about" className="link">
+          <div id="about">About</div>
+        </Link>
+        
+      </nav>
+    </div>
   );
 }
 

@@ -1,5 +1,4 @@
 .header{
-    background: turquoise;
     display:flex;
     flex-direction: column;
 }
